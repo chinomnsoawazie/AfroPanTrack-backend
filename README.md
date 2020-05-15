@@ -99,13 +99,13 @@
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
  <h1 id="challenge">Challenge</h1>
-  <p>The challenge for the backend of this app being able to store images in the backend. Elected to go this route as opposed to using cloud storage providers so as to minimize security breaches. The challenge was overcome.</p>
+  <p>The challenge for the backend of this app is several security measures that had to be put in place to ensure safety of users and intergrity of data. Email verification during signup works perfectly. Next is to implement text confirmation during signup.</p>
   
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
  
   <h1 id="demo">Demo</h1>
-   <p>Click <a href="https://youtu.be/DE5wNYxjdBY">here</a> to view demo</p>
+   <p>Demo  is coming later</p>
       
    <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
    
@@ -113,7 +113,6 @@
    <h1 id="installation">Installation</h1>
    <h2 id="prerequisites">Prerequisites</h2>
    <ul>
-   <li>Sign up with<a href="https://developer.nrel.gov/signup/"> National Renewable Energy Laboratory</a> to get an API key that will enable you fetch EV charging stations from their API</li>
      <li>Go to<a href="https://developers.google.com/maps/documentation/javascript/get-api-key"> Google maps JavaScript API key documentation page</a> to get an API key that will enable use any number of the about 14 different APIs for google maps services</li>
   </ul>
      <h2 id="backend-installation">Backend installlation</h2>
