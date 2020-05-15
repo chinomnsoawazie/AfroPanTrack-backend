@@ -119,10 +119,10 @@
   
    <h2 id="backend-installation">Backend installlation</h2>
 
-   <p>FindStation backend is biult with Ruby(2.7.0), Rails(^6.0.2), PostgreSQL(0.18) for PostgreSQL 12.1, Bcrypt(^3.1.7), Image processing(^1.2) from Active Storage, JWT, Active model serializer(^0.10.0), and Dotenv-rails(^2.7). 
+   <p>AfroPanTrack backend is biult with Ruby(2.7.0), Rails(^6.0.2), PostgreSQL(0.18) for PostgreSQL 12.1, Bcrypt(^3.1.7), Image processing(^1.2) from Active Storage, JWT, Active model serializer(^0.10.0), and Dotenv-rails(^2.7). 
   
  <ul> 
-  <li>Clone <a href="https://github.com/chinomnsoawazie/station-locate-backend">FindStation backend</a>
+  <li>Clone <a href="https://github.com/chinomnsoawazie/AfroPanTrack-backend">AfroPanTrack backend</a>
     <ul>
       <li>Ensure you have these uncommented or added in your gemfile before running <code>bundle install</code>
       <ul>
@@ -142,8 +142,8 @@
   <li>Run <code>bundle install</code> to install all gems/dependancies required for FindStation</li>
   <li>Run <code>rails db:create</code> to create a local PostgresQL database</li>
   <li>Run <code>rails db:migrate</code>to create the tables/columns required for proper FindStation functionality</li>
-  <li>Create a file called .env in the backend directory (/station_locate_backend/) and add HMAC_SECRET = "<insert a secret string here>"(this is for your JWT token), NREL_API_KEY= "<insert API Token you were issued by National Renewable Energy Laboratory>", and GOOGLE_MAPS_API_KEY= "<insert API Token you were issued by Google maps API>" to the file</li>
-   <li>Head over to  the <a href="https://github.com/chinomnsoawazie/station-locate-frontend/blob/master/README.md#frontend-installation">frontend</a> for instructions on how to install the frontend</li>
+  <li>Create a file called .env in the backend directory (/station_locate_backend/) and add HMAC_SECRET = "<insert a secret string here>"(this is for your JWT token), EMAIL= "<insert email for the app>", and GOOGLE_MAPS_API_KEY= "<insert API Token you were issued by Google maps API>" to the file</li>
+   <li>Head over to  the <a href="https://github.com/chinomnsoawazie/AfroPanTrack-frontend">frontend</a> for instructions on how to install the frontend</li>
 
  </ul>
 </p>
