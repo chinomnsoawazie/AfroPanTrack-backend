@@ -105,7 +105,7 @@
  
  
   <h1 id="demo">Demo</h1>
-   <p>Demo  is coming later</p>
+   <p>Coming soon</p>
       
    <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
    
