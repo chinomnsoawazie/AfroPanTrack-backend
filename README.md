@@ -8,32 +8,29 @@
 <p align="center"> <img src="https://img.shields.io/badge/-Technologies%20Used-blue" style="max-width:50%;"> </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CSS-3.0-blue" style="max-width:50%;">  
-  <img src="https://img.shields.io/badge/HTML-5.2-green" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/JavaScript-1.8.5-blue" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/ReactJS-16.12.0-yellowgreen" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/Redux-4.0.5-brightgreen" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/React%20Activestorage%20provider-0.8.0-orange" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/Redux%20Thunk-2.3.0-yellowgreen" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/React%20Google%20Maps-9.4.5-lightgrey" style="max-width:50%;">
-  <img src="https://img.shields.io/badge/axios-0.19.1-red" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Ruby-2.7.0-red" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/PostgreSQL-12.1-orange" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Image%20processing-1.2-green" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Ruby%20on%20Rails-6.0.2-red" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Active%20model%20serializers-0.10.0-yellow" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Dotenv%20Rails-2.7-orange" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/Bycrypt-3.1.7-blue" style="max-width:50%;">
+  <img src="https://img.shields.io/badge/JWT-1.5.4-red" style="max-width:50%;">
  </p>
   
  <p align="center"> <img src="https://img.shields.io/badge/-Notices-blue" style="max-width:50%;"> </p>
-
+   
  <p align="center"> 
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/chinomnsoawazie/station-locate-backend">
-      <img src="https://img.shields.io/badge/Backend%20Repository-Click%20here-green" style="max-width:50%;">
-    </a>
+  <a target="blank" rel="noopener noreferrer" href="https://github.com/chinomnsoawazie/station-locate-frontend">
+    <img src="https://img.shields.io/badge/Frontend%20repository-Click%20here-green" style="max-width:50%;">
+  </a>
    <img src="https://img.shields.io/badge/Status-Making%20mobile%20app%20version-brightgreen" style="max-width:50%;">
- </p>
- 
+</p>
+
  <h3 align="center"> Take a spin of the FindStation app on Heroku by clicking
  <a href="https://stationfind-app-frontend.herokuapp.com/">👉here👈</a></h3>
 
-  
-  
-  <h1>
+<h1>
   <a id="table-of-contents" class="anchor" href="#contents">  </a>
   Table of Contents
   </h1>
@@ -52,21 +49,24 @@
     <li><a href="#installation">Installation</a>
       <ul>
           <li><a href="#prerequisites">Prerequisites</a></li>
-          <li><a href="#frontend-installation">Frontend installation</a></li>
+          <li><a href="#backend-installation">Backend installation</a></li>
           <li><a href="#first-start">First start</a></li>
       </ul>
     </li>   
     <li><a href="#summary-of-files">Summary of files</a>
       <ul>
-          <li><a href="#external-dataset">External dataset</a></li>
+          <li><a href="#internal-file-structure">Internal file structure</a></li>
+          <li><a href="#internal-dataset">Internal dataset</a></li>
       </ul>
     </li>
    <li><a href="#planned-improvements">Planned improvements</a></li>
    <li><a href="#contact">Contact</a></li>
    <li><a href="#credits">Credits</a></li>
  </ul>
-  
-  <h1 id="inspiration">Inspiration</h1>
+ 
+ 
+   
+ <h1 id="inspiration">Inspiration</h1>
   
  <p>The root inspiration for this app is sustainability. For Electric Vehicle (EV) drivers, knowing stations closest to them is crucial. They equally need information about those stations without the clutter of ads. Finally, drivers should be able to focus on driving and delegate charge management to the app.</p>
   
@@ -80,7 +80,6 @@
     <p>Features of the app include the following;
       <ul> 
        <li>User can create, edit, and delete an account</li>
-       <li>User can check availability of username when creating an account</li>
        <li> A logged in user can search for stations using the following search criteria:
         <ul>
          <li>Street, city, and state</li>
@@ -119,36 +118,51 @@
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
  <h1 id="challenge">Challenge</h1>
-  <p>The challenge for the frontend of this app being able to follow the navigation polyline on a desktop or laptop. I mean you could try, but since the best-case scenerio is a laptop which uses wifi for location, it's practically useless for nagivation purposes. This challenge shall be solved by the mobile version which will use device GPS location strategy instead.</p>
+  <p>The challenge for the backend of this app being able to store images in the backend. Elected to go this route as opposed to using cloud storage providers so as to minimize security breaches. The challenge was overcome.</p>
   
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
  
-   <h1 id="demo">Demo</h1>
+  <h1 id="demo">Demo</h1>
    <p>Click <a href="https://youtu.be/DE5wNYxjdBY">here</a> to view demo</p>
-   
+      
    <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
    
    
    <h1 id="installation">Installation</h1>
    <h2 id="prerequisites">Prerequisites</h2>
-    <p>FindStation frontend is biult with React(^16.12.0), Axios(^0.19.1), google maps react(^2.0.2"), react google maps(^9.4.5), redux(^4.0.5), and redux thunk(^2.3.0). Ensure you have installed these packages with the specified versions or newer ones before cloning this repo. You can find their official installation guides below;
- <ul>
-  <li><a href="https://reactjs.org/docs/getting-started.html#create-a-new-react-app">React</a></li>
-  <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
-  <li><a href="https://www.npmjs.com/package/google-maps-react">Google maps react</a></li>
-  <li><a href="https://www.npmjs.com/package/react-google-maps">React google maps</a></li>
-  <li><a href="https://www.npmjs.com/package/redux">React Redux</a></li>
-  <li><a href="https://www.npmjs.com/package/redux-thunk">Redux Thunk</a></li>
- </ul>
-</p>
+   <ul>
+   <li>Sign up with<a href="https://developer.nrel.gov/signup/"> National Renewable Energy Laboratory</a> to get an API key that will enable you fetch EV charging stations from their API</li>
+     <li>Go to<a href="https://developers.google.com/maps/documentation/javascript/get-api-key"> Google maps JavaScript API key documentation page</a> to get an API key that will enable use any number of the about 14 different APIs for google maps services</li>
+  </ul>
+     <h2 id="backend-installation">Backend installlation</h2>
 
- <h2 id="frontend-installation">Frontend installation</h2>
-<p>To install the front end of FindStation, do the following;
- <ul>
-  <li>Clone the <a href="https://github.com/chinomnsoawazie/station-locate-frontend">Frontend</a></li>
-  <li>Ensure all relevant packages from the prerequisites section above are installed by running <code>npm install</code> from your terminal</li>
-  <li>Head over to <a href="https://github.com/chinomnsoawazie/station-locate-backend">Backend</a> and follow the instructions to install the backend API</li>
+   <p>FindStation backend is biult with Ruby(2.7.0), Rails(^6.0.2), PostgreSQL(0.18) for PostgreSQL 12.1, Bcrypt(^3.1.7), Image processing(^1.2) from Active Storage, JWT, Active model serializer(^0.10.0), and Dotenv-rails(^2.7). 
+  
+ <ul> 
+  <li>Clone <a href="https://github.com/chinomnsoawazie/station-locate-backend">FindStation backend</a>
+    <ul>
+      <li>Ensure you have these uncommented or added in your gemfile before running <code>bundle install</code>
+      <ul>
+         <li><code>gem 'jwt'</code></li>
+         <li><code>gem 'active_model_serializers', '~> 0.10.0'</code></li>
+         <li><code>gem "dotenv-rails", "~> 2.7"</code></li>
+         <li><code>gem 'bcrypt', '~> 3.1.7'</code></li>
+         <li><code>gem 'image_processing', '~> 1.2'</code></li>
+         <li><code>gem 'pg', '>= 0.18'</code></li>
+         <li><code>gem 'rails', '~> 6.0.2'</code></li>
+         <li><code>ruby '2.7.0'</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>In your terminal, run <code>rvm use ruby-2.7.0</code> to make sure you are using the correct Ruby version(this assumes you already had Ruby 2.7.0 installed)</li>
+  <li>Run <code>bundle install</code> to install all gems/dependancies required for FindStation</li>
+  <li>Run <code>rails db:create</code> to create a local PostgresQL database</li>
+  <li>Run <code>rails db:migrate</code>to create the tables/columns required for proper FindStation functionality</li>
+  <li>Create a file called .env in the backend directory (/station_locate_backend/) and add HMAC_SECRET = "<insert a secret string here>"(this is for your JWT token), NREL_API_KEY= "<insert API Token you were issued by National Renewable Energy Laboratory>", and GOOGLE_MAPS_API_KEY= "<insert API Token you were issued by Google maps API>" to the file</li>
+   <li>Head over to  the <a href="https://github.com/chinomnsoawazie/station-locate-frontend/blob/master/README.md#frontend-installation">frontend</a> for instructions on how to install the frontend</li>
+
  </ul>
 </p>
 
@@ -161,14 +175,20 @@ To acess the frontend, go to <code>http://localhost:3001</code></p>
 <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
 
 <h1 id="summary-of-files">Summary of files</h1>
-   <h2 id="external-dataset">External datatset</h2>
+   <h2 id="internal-file-structure">Internal file structure</h2>
     <p>
  <ul>
-  <li><a href="https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/nearest/">National Renewable Laboratory's Nearest Stations(Alternative Fuel Stations):</a> Source of EV charging stations</li>
-   <li><a href="https://developers.google.com/maps/documentation/javascript/tutorial"> Google Maps JavaScript Api documentation:</a>  You get the map data by sending the request to <code>https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap</code></li>
-  <li><a href="https://developers.google.com/maps/documentation/geocoding/intro#GeocodingResponses"> Google Maps Geocoding information documentation:</a>  You get the geocode information by sending the request to <code>https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,
-+Mountain+View,+CA&key=YOUR_API_KEY</code></li>
-  <li><a href="https://developers.google.com/maps/documentation/javascript/directions"> Google Maps Directions Service documentation:</a> Gives detailed information on how to send a directions service request</li>
+  <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/app">App:</a> Primary location for backend API configuration
+    <ul>
+      <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/app/controllers">controllers:</a> Render/RESTful/CRUD methods that carry our actoins including authorizations, checks, etc</li>
+       <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/app/serializers">serializers:</a>Filters for the backend API</li>
+        <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/app/models">models:</a>Active Record Associations/Validation methods</li>
+    </ul>
+   
+   </li>
+   <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/config"> config:</a> Start/Backend configuration files for routes, image processing, etc</li>
+  <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/tree/master/station_locate_backend/db"> db:</a> Database configuration files</li>
+  <li><a href="https://github.com/chinomnsoawazie/station-locate-backend/blob/master/station_locate_backend/Gemfile"> Gemfile:</a> Prerquisites and dependencies</li>
 </ul>
 </p>
 
@@ -180,12 +200,10 @@ To acess the frontend, go to <code>http://localhost:3001</code></p>
     <p>  Some of the planned improvements include;
 
  <ul>
-  <li>Implement checkins</li>
-  <li>Make the app social by allowing public commenting and sharing to social networks</li>
-   <li>Implement OAuth 2.0 to enable logging in using social media accounts</li>
-  <li>Implement tracking that lets the user know how when they need to head to a charging station and which stations they can make it to
+  <li>Persist checkins</li>
+  <li>Persist commenting and sharing to social networks activities</li>
+  <li>Implement tracking that lets the user know how when they need to head to a charging station and which stations they can make it to but persisting thier vehicle characteristics parameters
 </li>
-  <li>Audible alarm warning if charge is low and driver is getting out of range of charging stations. The alarm will persit until driver heeds it</li>
  </ul>
 </p>
 
@@ -207,15 +225,12 @@ To acess the frontend, go to <code>http://localhost:3001</code></p>
     <p>
  <ul>
   <li><a href="https://flatironschool.com/">The Flatiron School</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   <li><a href="https://jwt.io/introduction/">JWT Auth</a></li>
-  <li><a href="https://reactjs.org/">React</a></li>
-    <li><a href="https://reacttraining.com/react-router/">React router</a></li>
-  <li><a href="https://www.npmjs.com/package/redux-thunk">Redux Thunk</a></li>
-  <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
-  <li><a href="https://www.npmjs.com/package/google-maps-react">Google maps react</a></li>
-    <li><a href="https://www.npmjs.com/package/react-google-maps">React Google maps</a></li>
-  <li><a href="https://www.npmjs.com/package/redux">Redux</a></li>
+  <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
+  <li><a href="https://rubygems.org/gems/dotenv-rails/versions/2.7.5">dotenv-rails</a></li>
+  <li><a href="https://rubygems.org/gems/bcrypt/versions/3.1.7">Bcrypt</a></li>
+  <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
  </ul>
 </p>
 
