@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to COVID-19-Africa  web application, <%= @user.first_name %></h1>
+    <p>
+      You have successfully signed up to COVID-19-Africa web application,
+      your username is: <%= @user.username %>.<br>
+    </p>
+    <p>
+      To use the site as a member (which enables you report cases, quarantine locations and make comments), 
+      please confirm your email by clicking this link: <%= @user.confirm_token %>. If successfully confirmed, it will redirect you to the homepage of the app where you can now log in and use the app as a registered user.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

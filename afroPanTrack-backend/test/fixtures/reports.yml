@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  country: MyString
+  state: MyString
+  city: MyString
+  nearest_landmark: MyString
+  persons_involved: MyString
+  description: MyString
+  medical_attention_observed: false
+  medical_attention_description: MyString
+  can_we_follow_up: false
+  verified: false
+
+two:
+  user_id: 1
+  country: MyString
+  state: MyString
+  city: MyString
+  nearest_landmark: MyString
+  persons_involved: MyString
+  description: MyString
+  medical_attention_observed: false
+  medical_attention_description: MyString
+  can_we_follow_up: false
+  verified: false

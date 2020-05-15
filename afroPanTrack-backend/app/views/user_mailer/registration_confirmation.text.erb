@@ -1,0 +1,11 @@
+
+Welcome to COVID-19-Africa web application, <%= @user.first_name %>
+===============================================
+ 
+You have successfully signed up to COVID-19-Africa web application,
+your username is: <%= @user.username %>.
+ 
+To use the site as a member (which enables you report cases, quarantine locations and make comments), 
+please confirm your email by clicking this link: <%= @user.confirm_token %>.  If successfully confirmed, it will redirect you to the homepage of the app where you can now log in and use the app as a registered user.
+ 
+Thanks for joining, let's save ourselves!
