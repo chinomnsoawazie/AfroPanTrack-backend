@@ -66,13 +66,13 @@
    
  <h1 id="inspiration">Inspiration</h1>
   
- <p>The root inspiration for this app is sustainability. For Electric Vehicle (EV) drivers, knowing stations closest to them is crucial. They equally need information about those stations without the clutter of ads. Finally, drivers should be able to focus on driving and delegate charge management to the app.</p>
+ <p>Current COVID-19 pandemic ravaging the world shows different needs in different climes with respect to the same problem. In Africa, data integrity ranks highest as this will help know where resources should be channeled, ensure the right kind and level of response is being implemented and control public opinion. Also, the socioeconomic variables introduced requests different approach in aids and humanitarian efforts</p>
   
  <a href=#table-of-contents> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
   
   <h1 id="introduction">Introduction</h1>
    <h2 id="overview">Basic Overview</h2>
-    <p>User searches for nearest EV charging stations, displays those stations on a map individually or all at once, be able to have a street view of a station location whether viewed individually or collectively, and if they like a station, they can navigate to it.</p>
+    <p>User views infection map, government and scientific updates on the infection, reports new cases/leave comments about existing cases, and can request/give help from the app.</p>
     
    <h2 id="features">Features</h2>
     <p>Features of the app include the following;
