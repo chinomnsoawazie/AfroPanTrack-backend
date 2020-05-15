@@ -142,7 +142,7 @@
   <li>Run <code>bundle install</code> to install all gems/dependancies required for FindStation</li>
   <li>Run <code>rails db:create</code> to create a local PostgresQL database</li>
   <li>Run <code>rails db:migrate</code>to create the tables/columns required for proper FindStation functionality</li>
-  <li>Create a file called .env in the backend directory (/station_locate_backend/) and add HMAC_SECRET = "<insert a secret string here>"(this is for your JWT token), EMAIL= "<insert email for the app>", and GOOGLE_MAPS_API_KEY= "<insert API Token you were issued by Google maps API>" to the file</li>
+  <li>Create a file called .env in the backend directory (/station_locate_backend/) and add HMAC_SECRET = "insert a secret string here"(this is for your JWT token), EMAIL= "insert email for the app", and GOOGLE_MAPS_API_KEY= "insert API Token you were issued by Google maps API" to the file</li>
    <li>Head over to  the <a href="https://github.com/chinomnsoawazie/AfroPanTrack-frontend">frontend</a> for instructions on how to install the frontend</li>
 
  </ul>
