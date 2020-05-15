@@ -114,8 +114,10 @@
    <h2 id="prerequisites">Prerequisites</h2>
    <ul>
      <li>Go to<a href="https://developers.google.com/maps/documentation/javascript/get-api-key"> Google maps JavaScript API key documentation page</a> to get an API key that will enable use any number of the about 14 different APIs for google maps services</li>
+  <li>Have an email or create one specifically for the app</li>
   </ul>
-     <h2 id="backend-installation">Backend installlation</h2>
+  
+   <h2 id="backend-installation">Backend installlation</h2>
 
    <p>FindStation backend is biult with Ruby(2.7.0), Rails(^6.0.2), PostgreSQL(0.18) for PostgreSQL 12.1, Bcrypt(^3.1.7), Image processing(^1.2) from Active Storage, JWT, Active model serializer(^0.10.0), and Dotenv-rails(^2.7). 
   
