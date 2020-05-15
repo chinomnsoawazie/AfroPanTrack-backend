@@ -78,32 +78,15 @@
     <p>Features of the app include the following;
       <ul> 
        <li>User can create, edit, and delete an account</li>
-       <li> A logged in user can search for stations using the following search criteria:
+       <li>Users and guests can view infection map, government and scientific updates, and leave comments.</li>
+       <li> A logged in user can do the following:
         <ul>
-         <li>Street, city, and state</li>
-         <li>Street and zipcode</li>
-         <li>Zipcode</li>
-         <li>City and state</li>
-         <li>Use their current geolocation(or GPS)</li>
+         <li>Make a report</li>
+         <li>Request help</li>
+         <li>Offer help</li>
+         <li>Verify reports by other users</li>
         </ul>
         </li>
-       <li>A logged in user can search for stations and do the following:
-        <ul>
-         <li>Add a station to 'My stations' (a kinda favorite stations)</li>
-         <li>If station was already in the user's 'My stations', the station card gives them the option to remove it from their stations</li>
-         <li>View stations on a map individually and collectively</li>
-         <li>Navigate to the station directly from the station's card on the search results page or from the collective stations display, and see route info like distance, travel time and estimated time in traffic</li>
-         <li>See information on the station like station name, distance from current location, price to charge, address, available ports, kind of facility it is located in, who the station is accessible to, etc</li>
-         <li>Search returned stations by name</li>
-         <li>Filter stations by hours of operation, Telsa or non-tesla location, connector types, in-my-stations, etc</li>
-         <li>Start a new search altogether</li>
-        </ul>
-       </li>
-       <li>User can view 'My stations' in a separate dashboard</li>
-       <li>User can add/delete notes to a station in 'My stations'</li>
-       <li>User can upload pictures from thier device in the process of creating notes and those pictures will show alongside with the corresponding note</li>
-       <li>User can create and delete locations they frequent and view them in 'My locations' dashboard</li>
-       <li>User can run a search for nearest stations from a location card</li>
       </ul>
     </p>
     
@@ -111,7 +94,7 @@
   
   
  <h1 id="goals">Goals</h1>
-  <p>The goals are to serve up relevant nearby EV charging stations, give information on them, show them on a map, and navigate to them.</p>
+  <p>The goals are to provide a reliable platform for information on pandemics in Africa and enable asking/requesting for help.</p>
   
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
