@@ -1,4 +1,3 @@
-# AfroPanTrackBackend
 <p align="center">
  <a href="https://github.com/chinomnsoawazie/AfroPanTrack-backend">
  <img width="30%" src="https://github.com/chinomnsoawazie/AfroPanTrack-frontend/blob/master/logo.png" style="max-width:50%;">
