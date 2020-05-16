@@ -182,10 +182,11 @@ To acess the frontend, go to <code>http://localhost:3001</code></p>
     <p>  Some of the planned improvements include;
 
  <ul>
-  <li>Persist checkins</li>
-  <li>Persist commenting and sharing to social networks activities</li>
-  <li>Implement tracking that lets the user know how when they need to head to a charging station and which stations they can make it to but persisting thier vehicle characteristics parameters
-</li>
+  <li>Implement text-based confirmation during signup</li>
+  <li>Implement login-attempts lockout</li>
+  <li>Implement email and text-based confirmations for password and other sensitive account updates</li>
+   <li>Implement RSS feed on current pandemics</li>
+
  </ul>
 </p>
 
