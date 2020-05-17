@@ -1,0 +1,2 @@
+class QuarantineCentre < ApplicationRecord
+end

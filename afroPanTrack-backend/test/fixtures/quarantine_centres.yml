@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  lga: MyString
+  city_town_or_village: MyString
+  nearest_landmark: MyString
+  lat: 1.5
+  lng: 1.5
+  phone: 1
+  email: MyString
+  verified: false
+  verified_by: MyString
+  verification_notes: MyString
+
+two:
+  name: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  lga: MyString
+  city_town_or_village: MyString
+  nearest_landmark: MyString
+  lat: 1.5
+  lng: 1.5
+  phone: 1
+  email: MyString
+  verified: false
+  verified_by: MyString
+  verification_notes: MyString
