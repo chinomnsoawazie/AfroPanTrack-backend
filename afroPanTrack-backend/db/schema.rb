@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_174206) do
+ActiveRecord::Schema.define(version: 2020_05_19_173844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,58 @@ ActiveRecord::Schema.define(version: 2020_05_17_174206) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "barters", force: :cascade do |t|
+    t.string "requestor_name"
+    t.string "requestor_location"
+    t.string "item_description"
+    t.string "quantity"
+    t.string "category"
+    t.boolean "done"
+    t.string "receiver_name"
+    t.string "reciever_location"
+    t.string "date_done"
+    t.boolean "verified"
+    t.string "verified_by"
+    t.string "comments"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "descriptions", force: :cascade do |t|
+    t.string "organization"
+    t.string "country"
+    t.string "source_or_link"
+    t.string "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "facts", force: :cascade do |t|
+    t.string "organization"
+    t.string "source_or_link"
+    t.string "date_published"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "helps", force: :cascade do |t|
+    t.string "requestor"
+    t.string "description"
+    t.string "date_requested"
+    t.string "location"
+    t.string "date_required"
+    t.string "helper_name"
+    t.string "helper_location"
+    t.boolean "status"
+    t.string "help_offer_date"
+    t.string "date_completed"
+    t.boolean "verified"
+    t.string "verified_by"
+    t.string "comments"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "quarantine_centres", force: :cascade do |t|
@@ -73,6 +125,16 @@ ActiveRecord::Schema.define(version: 2020_05_17_174206) do
     t.boolean "verified"
     t.string "verified_by"
     t.string "verification_notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "updates", force: :cascade do |t|
+    t.string "description"
+    t.string "organization"
+    t.string "country"
+    t.string "source_or_link"
+    t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

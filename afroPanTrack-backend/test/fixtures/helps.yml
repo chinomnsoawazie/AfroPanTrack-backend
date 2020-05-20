@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requestor: MyString
+  description: MyString
+  date_requested: MyString
+  location: MyString
+  date_required: MyString
+  helper_name: MyString
+  helper_location: MyString
+  status: false
+  help_offer_date: MyString
+  date_completed: MyString
+  verified: false
+  verified_by: MyString
+  comments: MyString
+
+two:
+  requestor: MyString
+  description: MyString
+  date_requested: MyString
+  location: MyString
+  date_required: MyString
+  helper_name: MyString
+  helper_location: MyString
+  status: false
+  help_offer_date: MyString
+  date_completed: MyString
+  verified: false
+  verified_by: MyString
+  comments: MyString
