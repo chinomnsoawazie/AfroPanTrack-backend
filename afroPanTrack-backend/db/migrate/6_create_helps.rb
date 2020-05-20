@@ -1,13 +1,12 @@
 class CreateHelps < ActiveRecord::Migration[6.0]
   def change
     create_table :helps do |t|
-      t.string :requestor
+      t.string :requestor_id
       t.string :description
       t.string :date_requested
       t.string :location
       t.string :date_required
-      t.string :helper_name
-      t.string :helper_location
+      t.string :helper_id
       t.boolean :status
       t.string :help_offer_date
       t.string :date_completed
