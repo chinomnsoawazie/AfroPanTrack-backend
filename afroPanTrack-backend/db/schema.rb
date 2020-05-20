@@ -37,18 +37,20 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
   end
 
   create_table "barters", force: :cascade do |t|
-    t.string "requestor_id"
+    t.bigint "user_id", null: false
+    t.integer "requestor_id"
     t.string "item_description"
     t.string "quantity"
     t.string "category"
     t.boolean "done"
-    t.string "receiver_id"
+    t.integer "receiver_id"
     t.string "date_done"
     t.boolean "verified"
     t.string "verified_by"
     t.string "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_barters_on_user_id"
   end
 
   create_table "facts", force: :cascade do |t|
@@ -60,12 +62,13 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
   end
 
   create_table "helps", force: :cascade do |t|
-    t.string "requestor_id"
+    t.bigint "user_id", null: false
+    t.integer "requestor_id"
     t.string "description"
     t.string "date_requested"
     t.string "location"
     t.string "date_required"
-    t.string "helper_id"
+    t.integer "helper_id"
     t.boolean "status"
     t.string "help_offer_date"
     t.string "date_completed"
@@ -74,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_helps_on_user_id"
   end
 
   create_table "quarantine_centres", force: :cascade do |t|
@@ -150,4 +154,6 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "barters", "users"
+  add_foreign_key "helps", "users"
 end

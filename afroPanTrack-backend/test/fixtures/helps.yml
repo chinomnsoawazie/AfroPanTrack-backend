@@ -1,12 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  requestor_id: MyString
+  user: one
+  requestor_id: 1
   description: MyString
   date_requested: MyString
   location: MyString
   date_required: MyString
-  helper_id: MyString
+  helper_id: 1
   status: false
   help_offer_date: MyString
   date_completed: MyString
@@ -15,12 +16,13 @@ one:
   comments: MyString
 
 two:
-  requestor_id: MyString
+  user: two
+  requestor_id: 1
   description: MyString
   date_requested: MyString
   location: MyString
   date_required: MyString
-  helper_id: MyString
+  helper_id: 1
   status: false
   help_offer_date: MyString
   date_completed: MyString
