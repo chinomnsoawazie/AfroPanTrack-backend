@@ -21,6 +21,6 @@ class QuarantineCentreController < ApplicationController
 
     private
     def quarantineCentres_params
-        params.require(:quarantineCentre).permit(:id, :user_id, :name, :country, :state, :city, :lga, :city_town_or_village, :nearest_landmark, :lat, :lng, :phone, :email, :verified, :verified_by, :verification_notes, :file)
+        params.permit(:id, :user_id, :name, :country, :state, :city, :lga, :city_town_or_village, :nearest_landmark, :lat, :lng, :phone, :email, :verified, :verified_by, :verification_notes, :file)
     end
 end

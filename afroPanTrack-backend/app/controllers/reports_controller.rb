@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
 
     def create
         report = Report.create!(report_params)
-        byebug
+        # byebug
         if report.valid?
             render json: {AllReports: Report.all.with_attached_file}
         else 
@@ -22,6 +22,6 @@ class ReportsController < ApplicationController
 
     private
     def report_params
-        params.require(:report).permit(:id, :user_id, :country, :state, :city, :lga, :city_town_or_village, :nearest_landmark, :persons_involved, :description, :lat, :lng, :medical_attention_observed, :medical_attention_description, :can_we_follow_up, :verified, :verified_by, :verification_notes, :file)
+        params.permit(:id, :user_id, :country, :state, :city, :lga, :city_town_or_village, :nearest_landmark, :persons_involved, :description, :lat, :lng, :medical_attention_observed, :medical_attention_description, :can_we_follow_up, :verified, :verified_by, :verification_notes, :file)
     end
 end
