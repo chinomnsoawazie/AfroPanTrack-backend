@@ -15,8 +15,6 @@ class UsersController < ApplicationController
       end
     end
 
-    
-    
     def confirm_email
       confirm_token = "http://localhost:3000/users/confirm_email/" + params[:confirm_token]
       user = User.find_by_confirm_token(confirm_token)
@@ -33,14 +31,45 @@ class UsersController < ApplicationController
     end
 
     def ban_user_from_reporting
+      user = User.find_by(username: params[:username])
+      if user
+        user.allowed_to_report = false
+        user.save(:validate => false)
+      else
+        render json: 'User does not exist'
+      end
     end
 
     def ban_user_from_requesting_help
+      user = User.find_by(username: params[:username])
+      if user
+        user.allowed_to_request = false
+        user.save(:validate => false)
+      else
+        render json: 'User does not exist'
+      end
+    end
+
+    def ban_user
+      user = User.find_by(username: params[:username])
+      if user
+        user.allowed_to_request = false
+        user.allowed_to_report = false
+        user.save(:validate => false)
+      else
+        render json: 'User does not exist'
+      end
+    end
+
+    def contact_user_by_email
+
+    end
+
+    def contact_user_by_text
     end
    
     def create
       @user = User.create(user_params)
-      # byebug
       if @user.valid?
         UserMailer.registration_confirmation(@user).deliver_later
           render json: { user: UserSerializer.new(@user), token: token(@user.id), google_maps_api_key: ENV["GOOGLE_MAPS_API_KEY"], myEmail: ENV["MY_EMAIL"]}, status: :created
@@ -64,6 +93,6 @@ class UsersController < ApplicationController
   
     private
     def user_params
-      params.permit(:id, :first_name, :last_name, :username, :email, :city, :lga, :password, :phone_no, :country, :state, :street_address, :facebook_name, :twitter_handle, :confirm_token, :email_confirmed, :admin, :moderator, :allowed_to_request, :allowed_to_report)
+      params.permit(:id, :first_name, :ban_status, :ban_date, :last_name, :username, :email, :city, :lga, :password, :phone_no, :country, :state, :street_address, :facebook_name, :twitter_handle, :confirm_token, :email_confirmed, :admin, :moderator, :allowed_to_request, :allowed_to_report)
     end
 end
