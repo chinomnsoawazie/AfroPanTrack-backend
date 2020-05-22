@@ -31,9 +31,16 @@ class UsersController < ApplicationController
         render json: 'Sorry. User does not exist'
       end
     end
+
+    def ban_user_from_reporting
+    end
+
+    def ban_user_from_requesting_help
+    end
    
     def create
       @user = User.create(user_params)
+      # byebug
       if @user.valid?
         UserMailer.registration_confirmation(@user).deliver_later
           render json: { user: UserSerializer.new(@user), token: token(@user.id), google_maps_api_key: ENV["GOOGLE_MAPS_API_KEY"], myEmail: ENV["MY_EMAIL"]}, status: :created
@@ -57,7 +64,6 @@ class UsersController < ApplicationController
   
     private
     def user_params
-      params.permit(:id, :first_name, :last_name, :username, :email, 
-        :password, :phone_no, :country, :state, :street_address, :facebook_name, :twitter_handle, :confirm_token, :admin, :moderator)
+      params.permit(:id, :first_name, :last_name, :username, :email, :city, :lga, :password, :phone_no, :country, :state, :street_address, :facebook_name, :twitter_handle, :confirm_token, :email_confirmed, :admin, :moderator, :allowed_to_request, :allowed_to_report)
     end
 end

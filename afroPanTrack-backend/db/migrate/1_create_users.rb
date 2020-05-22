@@ -9,9 +9,14 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone_no
       t.string :country
       t.string :state
+      t.string :province
+      t.string :city
+      t.string :lga
       t.string :street_address
       t.string :facebook_name
       t.string :twitter_handle
+      t.boolean :ban_status
+      t.string :ban_date
 
       t.timestamps
     end

@@ -15,7 +15,7 @@ class BarterController < ApplicationController
     def create
         barter = Barter.create!(barter_params)
         if barter.valid?
-            render json: {AllBarter: Barter.all}
+            render json: {AllBarter: barter}
         else
             render json: {error: 'Barter not created'}, status: :unprocessable_entity
         end

@@ -1,6 +1,7 @@
 class LoginController < ApplicationController
     def create
         user = User.find_by(username: user_params[:username])
+        # byebug 
         if user && user.authenticate(user_params[:password])  
           render json: { user: UserSerializer.new(user), token: token(user.id), google_maps_api_key: ENV["GOOGLE_MAPS_API_KEY"], myEmail: ENV["MY_EMAIL"]}
         else
