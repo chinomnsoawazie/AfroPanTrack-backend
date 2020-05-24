@@ -20,6 +20,14 @@ class HelpController < ApplicationController
             render json: {error: 'Help not created'}, status: :unprocessable_entity
         end
     end
+    def update
+        help = Help.find(params[:id])
+        if help.update(help_params)
+          render json: help
+        else
+          render json: help.errors, status: :unprocessable_entity
+        end
+      end
 
     def destroy
         Help.destroy(params[:id])

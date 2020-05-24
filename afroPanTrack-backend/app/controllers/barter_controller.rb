@@ -21,6 +21,15 @@ class BarterController < ApplicationController
         end
     end
 
+    def update
+        barter = Barter.find(params[:id])   
+        if barter.update(barter_params)
+          render json: barter
+        else
+          render json: barter.errors, status: :unprocessable_entity
+        end
+      end
+
     def destroy
         Barter.destroy(params[:id])
     end

@@ -15,6 +15,15 @@ class ReportsController < ApplicationController
         end
     end
 
+    def update
+        report = Report.find(params[:id])
+        if report.update(report_params)
+          render json: report
+        else
+          render json: report.errors, status: :unprocessable_entity
+        end
+      end
+
     def destroy
         Report.destroy(params[:id])
         render json: Report.all.with_attached_file

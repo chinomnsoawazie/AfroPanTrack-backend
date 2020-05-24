@@ -14,6 +14,15 @@ class UpdateController < ApplicationController
         end
     end
 
+    def update
+        update = Update.find(params[:id])
+        if update.update(update_params)
+          render json: update
+        else
+          render json: update.errors, status: :unprocessable_entity
+        end
+    end
+
     def destroy
         Update.destroy(params[:id])
         render json: Update.all

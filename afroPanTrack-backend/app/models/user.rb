@@ -6,7 +6,7 @@ class User < ApplicationRecord
     has_many :helps
     has_many :barters
     validates_presence_of :username
-    validates_uniqueness_of :username, :case_sensitive => false
+    validates_uniqueness_of :username, :case_sensitive => true
     validates :password, length: { minimum: 6 }
 
     private

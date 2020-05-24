@@ -5,18 +5,26 @@ class QuarantineCentreController < ApplicationController
     end
 
     def create
-        report = Report.create!(report_params)
-        byebug
-        if report.valid?
-            render json: {AllReports: Report.all.with_attached_file}
+        centre = QuarantineCentre.create!(quarantineCentres_params)
+        if centre.valid?
+            render json: {AllCentres: QuarantineCentre.all.with_attached_file}
         else 
-            render json: {error: 'Report not created'}, status: :unprocessable_entity
+            render json: {error: 'Quarantine centre not created'}, status: :unprocessable_entity
         end
     end
 
+    def update
+        centre = QuarantineCentre.find(params[:id])
+        if centre.update(quarantineCentres_params)
+          render json: centre
+        else
+          render json: centre.errors, status: :unprocessable_entity
+        end
+      end
+
     def destroy
-        Report.destroy(params[:id])
-        render json: Report.all.with_attached_file
+        QuarantineCentre.destroy(params[:id])
+        render json: QuarantineCentre.all.with_attached_file
     end
 
     private

@@ -137,7 +137,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.string "phone_no"
+    t.integer "phone_no"
     t.string "country"
     t.string "state"
     t.string "province"
@@ -146,6 +146,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "street_address"
     t.string "facebook_name"
     t.string "twitter_handle"
+    t.boolean "ban_status"
+    t.string "ban_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "email_confirmed", default: false

@@ -14,6 +14,15 @@ class FactsController < ApplicationController
         end
     end
 
+    def update
+        fact = Fact.find(params[:id])
+        if fact.update(fact_params)
+          render json: fact
+        else
+          render json: fact.errors, status: :unprocessable_entity
+        end
+      end
+
     def destroy
         Fact.destroy(params[:id])
         render json: Fact.all
