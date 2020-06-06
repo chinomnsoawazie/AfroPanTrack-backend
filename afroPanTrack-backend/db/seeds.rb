@@ -12,6 +12,7 @@ Fact.destroy_all
 Update.destroy_all
 Help.destroy_all
 Barter.destroy_all
+QuarantineCentre.destroy_all
 
 User.create(first_name: 'Chinomnso', last_name: 'Awazie', username: 'nonsoadmin', email: 'coawazie@gmail.com', city: 'Owerri', lga: 'Owerri North', password_digest:  BCrypt::Password.create("password"), phone_no: 77777777777, country: 'Nigeria', state: 'Imo', admin: true)
 
@@ -34,6 +35,8 @@ Help.create(requestor_id: 2, description: 'need milk', date_requested: '04/04/20
 
 Barter.create(requestor_id: 1, item_description: 'yam', quantity: 'Two tubers', category: 'food', done: false)
 Barter.create(requestor_id: 2, item_description: 'shirt', quantity: '4', category: 'clothes', done: true, receiver_id: 1, date_done: '04/05/2020', verified: true, verified_by: 'Funke', comments: 'well fitting shirt')
+QuarantineCentre.create(user_id: 1, name: 'Warri centre', country: 'Nigeria', state: 'Delta', city: 'Warri', lga: 'Warri North', city_town_or_village: 'Ugborikoko', nearest_landmark: 'Protea Hotel', lat: 5.5544, lng: 5.7932, phone: 71088, email: 'awazie@gmail.com', verified: true, verified_by: 'Ezeagwula', verification_notes: 'Not verified by ogbonge')
+
 
 
 

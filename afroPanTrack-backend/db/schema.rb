@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
   end
 
   create_table "quarantine_centres", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "country"
     t.string "state"

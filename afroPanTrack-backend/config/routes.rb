@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :facts
   resources :helps
   resources :login, only: [:create]
-  resources :quarantine_centres
+  resources :quarantine_centre
   resources :reports
   resources :update
   resources :users

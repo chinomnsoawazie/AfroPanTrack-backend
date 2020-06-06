@@ -1,5 +1,6 @@
 class QuarantineCentreController < ApplicationController
     def index
+        # byebug
         centres = QuarantineCentre.all
         render json: {AllQuarantineCentres: centres}
     end
