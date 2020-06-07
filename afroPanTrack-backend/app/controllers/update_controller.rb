@@ -6,7 +6,6 @@ class UpdateController < ApplicationController
 
     def create
         update = Update.create!(update_params)
-        # byebug
         if update.valid?
             render json: {AllUpdates: Update.all}
         else 
