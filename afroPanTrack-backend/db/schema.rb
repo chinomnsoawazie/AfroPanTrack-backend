@@ -54,8 +54,12 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
   end
 
   create_table "facts", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
     t.string "organization"
-    t.string "source_or_link"
+    t.string "source"
+    t.string "link"
+    t.string "category"
     t.string "date_published"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

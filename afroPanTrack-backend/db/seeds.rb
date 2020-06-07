@@ -22,9 +22,9 @@ Report.create(user_id: 1, country: 'Nigeria', state: 'Abuja', city_town_or_villa
 Report.create(user_id: 1, country: 'Nigeria', state: 'Lagos', city_town_or_village: 'Nyanya', city: 'Ajegunle', lga: 'owerri', nearest_landmark: 'Lagos House of Assembly', persons_involved: 'Kola Oladapo', description: 'Tempratures running high', lat: 6.44383, lng: 3.36869, medical_attention_observed: false, medical_attention_description: 'Food was administered', can_we_follow_up: true, verified: false)
 Report.create(user_id: 1, country: 'Nigeria', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'owerri', nearest_landmark: 'Wuse Hospital', persons_involved: 'Bello Yahaya', description: 'Difficulty in breathing', lat: 9.08203, lng: 7.48214, medical_attention_observed: true, medical_attention_description: 'None observed', can_we_follow_up: false, verified: true)
 
-Fact.create(organization: 'WHO', source_or_link: 'www.who.org', date_published: '08/09/2020')
-Fact.create(organization: 'CDC', source_or_link: 'www.cdc.gov', date_published: '04/24/2020')
-Fact.create(organization: 'WHO', source_or_link: 'www.who.org', date_published: '08/09/2020')
+Fact.create(title: 'Are we all gonna die?', description: 'They have said we all gone die', organization: 'WHO', source: 'WHO', link: 'www.who.org', category: 'rumor', date_published: '08/09/2020')
+Fact.create(title: 'Are we all stupid?', description: 'They have said we all stupd and it seems so', organization: 'CDC', source: 'CDC', link: 'www.cdc.gov', category: 'symptoms', date_published: '04/24/2020')
+Fact.create(title: 'What the hell?', description: 'Captian, no sign of intelligent life found', organization: 'WHO', source: 'WHO', link: 'www.who.org', category: 'transmission', date_published: '08/09/2020')
 
 Update.create(description: 'Covid-19 is now in Tanzania', organization: 'TDC', country: 'Tanzania', source_or_link: 'www.tanzania.gov', date: '04/23/2020')
 Update.create(description: 'Covid-19 is now in Ghana', organization: 'GDC', country: 'Ghana', source_or_link: 'www.ghana.gov', date: '04/23/2020')

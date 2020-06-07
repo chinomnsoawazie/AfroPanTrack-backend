@@ -30,6 +30,6 @@ class FactsController < ApplicationController
 
     private
     def fact_params
-        params.permit(:id, :organization, :source_or_link, :date_published)
+        params.permit(:id, :title, :description, :organization, :source, :link, :category, :date_published)
     end
 end
