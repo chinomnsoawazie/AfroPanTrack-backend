@@ -11,8 +11,10 @@ class User < ApplicationRecord
 
     private
     def confirmation_token
-        if self.confirm_token.blank?
+        if self.confirm_token.blank? && self.admin != true
             self.confirm_token = "http://localhost:3000/users/confirm_email/" + SecureRandom.urlsafe_base64.to_s
+        else
+            self.confirm_token = nil
         end
     end
 

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :barter
   resources :facts
-  resources :helps
+  resources :help
   resources :login, only: [:create]
   resources :quarantine_centre
   resources :reports

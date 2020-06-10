@@ -90,12 +90,6 @@ class UsersController < ApplicationController
   end
   
   def create
-    if params[:admin]
-      @user = User.create(user_params)
-      user.save(:validate => false)
-      UserMailer.registration_confirmation(@user).deliver_later
-
-    else
       @user = User.create(user_params)
       if @user.valid?
         UserMailer.registration_confirmation(@user).deliver_later
@@ -103,7 +97,6 @@ class UsersController < ApplicationController
         else
           render json: { error: 'failed to create user' }, status: :not_acceptable
       end
-    end
   end
   
   def update

@@ -3,13 +3,14 @@ class HelpController < ApplicationController
 
     def index
         helps = Help.all
+        # byebug
         render json: {AllHelp: helps}
     end
 
     def userHelps
         user = User.find(params[:user_id])
         myHelps = user.helps
-        render = json: {myHelps: myHelps}
+        render json: {myHelps: myHelps}
     end
 
     def create
@@ -35,6 +36,7 @@ class HelpController < ApplicationController
 
     private
     def help_params
-        params.permit(:id, :requestor_id, :description, :date_requested, :location, :date_required, :helper_id, :status, :help_offer_date, :date_completed, :verified, :verified_by, :comments)
+        params.permit(:id, :user_id, :requestor_id, :description, :date_requested, :country, :state, :city, :lga, :city_town_or_village, :date_required,
+             :helper_id, :status, :help_offer_date, :date_completed, :request_verified, :request_verified_by, :help_offer_verified, :help_offer_verified_by, :comments)
     end
 end
