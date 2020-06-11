@@ -3,7 +3,6 @@ class User < ApplicationRecord
 
     has_secure_password
     has_many :reports
-    has_many :helps
     has_many :barters
     validates_presence_of :username
     validates_uniqueness_of :username, :case_sensitive => true

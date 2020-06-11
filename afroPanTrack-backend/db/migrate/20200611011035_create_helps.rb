@@ -1,7 +1,6 @@
 class CreateHelps < ActiveRecord::Migration[6.0]
   def change
     create_table :helps do |t|
-      t.belongs_to :user, null: false, foreign_key: true
       t.string :description
       t.string :date_requested
       t.string :country
@@ -12,6 +11,7 @@ class CreateHelps < ActiveRecord::Migration[6.0]
       t.string :nearest_landmark
       t.string :date_required
       t.integer :helper_id
+      t.integer :requestor_id
       t.boolean :done_status
       t.string :help_offer_date
       t.string :date_completed

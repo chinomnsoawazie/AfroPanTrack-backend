@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_192813) do
+ActiveRecord::Schema.define(version: 2020_06_11_051041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,9 +65,14 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "helpers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "help_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "helps", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.integer "requestor_id"
     t.string "description"
     t.string "date_requested"
     t.string "country"
@@ -78,6 +83,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "nearest_landmark"
     t.string "date_required"
     t.integer "helper_id"
+    t.integer "requestor_id"
     t.boolean "done_status"
     t.string "help_offer_date"
     t.string "date_completed"
@@ -88,7 +94,6 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_helps_on_user_id"
   end
 
   create_table "quarantine_centres", force: :cascade do |t|
@@ -149,7 +154,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.integer "phone_no"
+    t.bigint "phone_no"
     t.string "country"
     t.string "state"
     t.string "province"
@@ -172,5 +177,4 @@ ActiveRecord::Schema.define(version: 2020_03_22_192813) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "barters", "users"
-  add_foreign_key "helps", "users"
 end

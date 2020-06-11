@@ -1,31 +1,43 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  requestor_id: 1
   description: MyString
   date_requested: MyString
-  location: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  lga: MyString
+  city_town_or_village: MyString
+  nearest_landmark: MyString
   date_required: MyString
   helper_id: 1
-  status: false
+  requestor_id: 1
+  done_status: false
   help_offer_date: MyString
   date_completed: MyString
-  verified: false
-  verified_by: MyString
+  request_verified: false
+  request_verified_by: MyString
+  help_offer_verified: false
+  help_offer_verified_by: MyString
   comments: MyString
 
 two:
-  user: two
-  requestor_id: 1
   description: MyString
   date_requested: MyString
-  location: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  lga: MyString
+  city_town_or_village: MyString
+  nearest_landmark: MyString
   date_required: MyString
   helper_id: 1
-  status: false
+  requestor_id: 1
+  done_status: false
   help_offer_date: MyString
   date_completed: MyString
-  verified: false
-  verified_by: MyString
+  request_verified: false
+  request_verified_by: MyString
+  help_offer_verified: false
+  help_offer_verified_by: MyString
   comments: MyString

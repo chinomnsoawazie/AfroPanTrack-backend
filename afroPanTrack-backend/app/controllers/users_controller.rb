@@ -61,13 +61,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def contact_user_by_email
+  # def contact_user_by_email
 
 
-  end
+  # end
 
-  def contact_user_by_text
-  end
+  # def contact_user_by_text
+  # end
 
   def make_moderator
     user = User.find_by(username: params[:username])

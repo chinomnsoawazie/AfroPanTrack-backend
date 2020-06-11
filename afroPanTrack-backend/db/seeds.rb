@@ -13,6 +13,7 @@ Update.destroy_all
 Help.destroy_all
 Barter.destroy_all
 QuarantineCentre.destroy_all
+Helper.destroy_all
 
 # User.create(first_name: 'Chinomnso', last_name: 'Awazie', username: 'nonsoadmin3', email: 'coawazie@gmail.com', password_digest:  BCrypt::Password.create("password"),
 # country: 'Nigeria',  city: 'Owerri', lga: 'Owerri North', state: 'Imo', phone_no: 777, street_address: '214 Hello street', facebook_name: 'Awazie', admin: true,
@@ -45,15 +46,27 @@ Update.create(description: 'Covid-19 is now in Acra', organization: 'TDC', count
 Update.create(description: 'Covid-19 is now in Ibeku', organization: 'TDC', country: 'Nigeria', source_or_link: 'www.tanzania.gov', date: '04/23/2020')
 
 
-Help.create(user_id: 1, description: 'need bread', date_requested: '03/04/2020', country: 'Nigeria', state: 'Lagos', city_town_or_village: 'Nyanya', city: 'Ajegunle', lga: 'owerri', date_required: "04/05/2020", helper_id: nil, done_status: false)
-Help.create(user_id: 1, description: 'need milk', date_requested: '04/04/2020', country: 'Nigeria', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", helper_id: nil, done_status: false)
-Help.create(user_id: 1, description: 'need fufu', date_requested: '04/04/2020', country: 'Ghana', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", helper_id: 3, done_status: false)
-Help.create(user_id: 1, description: 'need gari', date_requested: '04/04/2020', country: 'Ghana', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", helper_id: nil, done_status: false)
-Help.create(user_id: 1, description: 'need gari', date_requested: '04/04/2020', country: 'Nigeria', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", helper_id: 1, done_status: true, comments: 'We have gotten Garri')
+Help.create(requestor_id: 1, description: 'need bread', date_requested: '03/04/2020', country: 'Nigeria', state: 'Lagos', city_town_or_village: 'Nyanya', city: 'Ajegunle', lga: 'owerri', date_required: "04/05/2020", done_status: false)
+Help.create(requestor_id: 1, description: 'need milk', date_requested: '04/04/2020', country: 'Nigeria', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", done_status: false)
+Help.create(requestor_id: 1, description: 'need fufu', date_requested: '04/04/2020', country: 'Ghana', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", done_status: false)
+Help.create(requestor_id: 1, description: 'need gari', date_requested: '04/04/2020', country: 'Ghana', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", done_status: false)
+Help.create(requestor_id: 1, description: 'need gari', date_requested: '04/04/2020', country: 'Nigeria', state: 'Abuja', city_town_or_village: 'Nyanya', city: 'Maraba', lga: 'FCT', date_required: "04/10/2020", date_completed: "06/06/2020", help_offer_verified: true, done_status: true, comments: 'We have gotten Garri')
+
+Helper.create(user_id: 1, help_id: 1)
+Helper.create(user_id: 1, help_id: 1)
+Helper.create(user_id: 1, help_id: 2)
+Helper.create(user_id: 1, help_id: 2)
+
+
 
 Barter.create(requestor_id: 1, item_description: 'yam', quantity: 'Two tubers', category: 'food', done: false)
 Barter.create(requestor_id: 2, item_description: 'shirt', quantity: '4', category: 'clothes', done: true, receiver_id: 1, date_done: '04/05/2020', verified: true, verified_by: 'Funke', comments: 'well fitting shirt')
+
 QuarantineCentre.create(user_id: 1, name: 'Warri centre', country: 'Nigeria', state: 'Delta', city: 'Warri', lga: 'Warri North', city_town_or_village: 'Ugborikoko', nearest_landmark: 'Protea Hotel', lat: 5.554478, lng: 5.793288, phone: 71088, email: 'awazie@gmail.com', verified: true, verified_by: 'Ezeagwula', verification_notes: 'Not verified by ogbonge')
+
+
+
+
 
 
 

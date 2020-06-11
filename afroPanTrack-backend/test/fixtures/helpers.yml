@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  help: one
-  helper_id: 
+  user_id: 1
+  help_id: 
 
 two:
-  help: two
-  helper_id: 
+  user_id: 1
+  help_id: 

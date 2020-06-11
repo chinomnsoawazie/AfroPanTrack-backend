@@ -3,20 +3,23 @@ class HelpController < ApplicationController
 
     def index
         helps = Help.all
-        # byebug
-        render json: {AllHelp: helps}
+        allHelps = helps.map{|help| HelpSerializer.new(help)}
+        render json: {AllHelp: allHelps}
     end
 
     def userHelps
-        user = User.find(params[:user_id])
-        myHelps = user.helps
-        render json: {myHelps: myHelps}
+        # user = User.find(params[:user_id])
+        myHelps = Help.all.select{|help| help.requestor_id == params[:user_id]}
+        allMyHelps = myHelps.map{|help| HelpSerializer.new(help)}
+        render json: {myHelps: allMyHelps}
     end
 
     def create
         help = Help.create!(help_params)
+        helps = Help.all
+        allHelps = helps.map{|help| HelpSerializer.new(help)}
         if help.valid?
-            render json: {AllHelps: Help.all}
+            render json: {AllHelps: allHelps}
         else
             render json: {error: 'Help not created'}, status: :unprocessable_entity
         end
@@ -32,6 +35,9 @@ class HelpController < ApplicationController
 
     def destroy
         Help.destroy(params[:id])
+        helps = Help.all
+        allHelps = helps.map{|help| HelpSerializer.new(help)}
+        render json: {AllHelps: allHelps}
     end
 
     private
