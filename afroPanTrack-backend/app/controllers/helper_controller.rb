@@ -15,14 +15,14 @@ class HelperController < ApplicationController
         end
     end
 
-    # def update
-    #     helper = Helper.find(params[:id])
-    #     if helper.update(helper_params)
-    #       render json: helper
-    #     else
-    #       render json: helper.errors, status: :unprocessable_entity
-    #     end
-    # end
+    def update
+        helper = Helper.find(params[:id])
+        if helper.update(helper_params)
+          render json: helper
+        else
+          render json: helper.errors, status: :unprocessable_entity
+        end
+    end
 
     def destroy
         Helper.destroy(params[:id])

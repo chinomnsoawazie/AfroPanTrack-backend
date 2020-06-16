@@ -2,6 +2,13 @@ class UsersController < ApplicationController
 
   skip_before_action :authorized, onliy: [:api_keys]
 
+
+  def index
+    users = User.all
+    render json: users 
+  end
+
+
   def api_keys
     render json: { google_maps_api_key: ENV["GOOGLE_MAPS_API_KEY"], myEmail: ENV["MY_EMAIL"] }
   end

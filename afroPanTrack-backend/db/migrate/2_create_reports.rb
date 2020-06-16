@@ -12,10 +12,10 @@ class CreateReports < ActiveRecord::Migration[6.0]
       t.string :description
       t.float :lat
       t.float :lng
-      t.boolean :medical_attention_observed
+      t.boolean :medical_attention_observed, :default => false
       t.string :medical_attention_description
-      t.boolean :can_we_follow_up
-      t.boolean :verified
+      t.boolean :can_we_follow_up, :default => true
+      t.boolean :verified, :default => false
       t.string :verified_by
       t.string :verification_notes
 

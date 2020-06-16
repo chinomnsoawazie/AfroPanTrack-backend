@@ -15,7 +15,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :street_address
       t.string :facebook_name
       t.string :twitter_handle
-      t.boolean :ban_status
+      t.boolean :ban_status, :default => false
       t.string :ban_date
 
       t.timestamps

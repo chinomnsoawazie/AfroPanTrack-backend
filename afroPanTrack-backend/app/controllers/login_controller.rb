@@ -9,7 +9,7 @@ class LoginController < ApplicationController
         end 
       end
   
-      def persist
+      def persiBarterst
         if decoded_token
           render json: logged_in_user
         end

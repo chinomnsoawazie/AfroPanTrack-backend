@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  barter: one
+  user_id: 1
+  qty_offered: MyString
+  closed_status: false
+
+two:
+  barter: two
+  user_id: 1
+  qty_offered: MyString
+  closed_status: false

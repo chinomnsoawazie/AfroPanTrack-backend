@@ -9,7 +9,7 @@ class BarterController < ApplicationController
     def userBarters
         user = User.find(params[:user_id])
         myBarters = user.barters
-        render = json: {myBarters: myBarters}
+        render json: {myBarters: myBarters}
     end
 
     def create

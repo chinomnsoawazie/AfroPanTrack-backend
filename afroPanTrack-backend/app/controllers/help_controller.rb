@@ -4,7 +4,8 @@ class HelpController < ApplicationController
     def index
         helps = Help.all
         allHelps = helps.map{|help| HelpSerializer.new(help)}
-        render json: {AllHelp: allHelps}
+        allHelpers = Helper.all
+        render json: {AllHelp: allHelps, AllHelpers: allHelpers}
     end
 
     def userHelps
@@ -42,7 +43,7 @@ class HelpController < ApplicationController
 
     private
     def help_params
-        params.permit(:id, :user_id, :requestor_id, :description, :date_requested, :country, :state, :city, :lga, :city_town_or_village, :date_required,
+        params.permit(:id, :user_id, :description, :date_requested, :country, :state, :city, :lga, :city_town_or_village, :date_required,
              :helper_id, :status, :help_offer_date, :date_completed, :request_verified, :request_verified_by, :help_offer_verified, :help_offer_verified_by, :comments)
     end
 end

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :reports
   resources :update
   resources :users
+  resources :helper
+
 
   get 'apikeys', :to => 'users#api_keys'
   get 'users/checkusername/:username', :to => 'users#check_username'

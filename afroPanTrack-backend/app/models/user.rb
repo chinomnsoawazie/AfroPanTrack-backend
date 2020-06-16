@@ -4,6 +4,8 @@ class User < ApplicationRecord
     has_secure_password
     has_many :reports
     has_many :barters
+    has_many :quarantine_centres
+    has_many :helps
     validates_presence_of :username
     validates_uniqueness_of :username, :case_sensitive => true
     validates :password, length: { minimum: 6 }
