@@ -9,17 +9,64 @@ class UserSerializer < ActiveModel::Serializer
    has_many :helps
 
    def help_offers_made
-      helpOffers = Help.all.select{|help| help.helper_id == object.id}
-      return helpOffers.map{|offer| HelpOfferSerializer.new(offer)}
+      Help.all.select{|help| help.helper_id == object.id}.map{|offer| HelpOfferSerializer.new(offer)}
    end
 
    def barter_user_bid_on
-      bids = Bid.all.select{|bid| bid.user_id == object.id}
-      bids.map{|bid| bid.barter}
+      Bid.all.select{|bid| bid.user_id == object.id}.map{|bid| BidSerializer.new(bid)}
    end
 
    def barters_completed
-      Barter.all.select{|barter| barter.receiver_id == object.id && barter.done == true}
+      # Items bid and recieved
+      closedRecievedBarters = Barter.all.select{|barter| barter.receiver_id == object.id && barter.done == true}
+
+      # Items requested and recieved
+      closedRequestedBarters = Barter.all.select{|barter| barter.user_id == object.id && barter.done == true}
+
+
+      # Items bid and lost
+      allMyBidsOnClosedBids = Bid.all.select{|bid| bid.user_id == object.id && bid.closed_status == true}
+      bartersOfMyBidsOnClosedBids = allMyBidsOnClosedBids.map{ |bid| bid.barter}
+      lostBarters = bartersOfMyBidsOnClosedBids.select{|barter| barter.receiver_id != object.id && barter.done == true}
+
+
+      closedRecievedBartersWithDetails = []
+      closedRecievedBarters.each do |barter|
+         newBarterObject = {}
+         newBarterObject['barter'] = barter
+         newBarterObject['requestor'] = HelperSerializer.new(User.find(barter.user_id))
+         closedRecievedBartersWithDetails << newBarterObject
+      end
+
+
+      closedRequestedBartersWithDetails = []
+      closedRequestedBarters.each do |barter|
+         newBarterObject = {}
+         newBarterObject['barter'] = barter
+         newBarterObject['receiver'] = HelperSerializer.new(User.find(barter.receiver_id))
+         closedRequestedBartersWithDetails << newBarterObject
+      end
+
+      lostBartersWithDetails = []
+      lostBarters.each do |barter|
+         newBarterObject = {}
+         newBarterObject['barter'] = barter
+         newBarterObject['requestor'] = HelperSerializer.new(User.find(barter.user_id))
+         lostBartersWithDetails << newBarterObject
+      end
+
+
+
+      allMyCompletedBarters = []
+      allMyCompletedBarters << closedRecievedBartersWithDetails
+      allMyCompletedBarters << closedRequestedBartersWithDetails
+      allMyCompletedBarters << lostBartersWithDetails
+
+      return allMyCompletedBarters
+
+
+
+      # return closedBartersWithDetails
    end
 
 end

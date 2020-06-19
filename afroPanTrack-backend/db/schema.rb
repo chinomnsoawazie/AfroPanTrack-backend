@@ -39,7 +39,8 @@ ActiveRecord::Schema.define(version: 2020_06_15_170452) do
   create_table "barters", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "item_description"
-    t.string "quantity"
+    t.string "quantity_requested"
+    t.string "quantity_received"
     t.string "category"
     t.string "country"
     t.string "state"
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_170452) do
   create_table "helpers", force: :cascade do |t|
     t.integer "user_id"
     t.integer "help_id"
+    t.string "qty_offered"
     t.boolean "help_offer_accepted", default: false
     t.boolean "followed_through", default: false
     t.boolean "make_me_anonymous", default: false
@@ -127,6 +129,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_170452) do
     t.string "nearest_landmark"
     t.float "lat"
     t.float "lng"
+    t.string "date_reported"
     t.integer "phone"
     t.string "email"
     t.boolean "verified"
@@ -148,6 +151,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_170452) do
     t.string "description"
     t.float "lat"
     t.float "lng"
+    t.string "date_reported"
     t.boolean "medical_attention_observed", default: false
     t.string "medical_attention_description"
     t.boolean "can_we_follow_up", default: true

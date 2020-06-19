@@ -11,6 +11,7 @@ class CreateQuarantineCentres < ActiveRecord::Migration[6.0]
       t.string :nearest_landmark
       t.float :lat
       t.float :lng
+      t.string :date_reported
       t.integer :phone
       t.string :email
       t.boolean :verified

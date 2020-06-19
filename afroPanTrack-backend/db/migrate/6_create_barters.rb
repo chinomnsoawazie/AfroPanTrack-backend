@@ -3,7 +3,8 @@ class CreateBarters < ActiveRecord::Migration[6.0]
     create_table :barters do |t|
       t.belongs_to :user, null: false, foreign_key: true
       t.string :item_description
-      t.string :quantity
+      t.string :quantity_requested
+      t.string :quantity_received
       t.string :category
       t.string :country
       t.string :state

@@ -9,11 +9,27 @@ def helpers
   # make an array of the user_ids from allHelperObjects
   allHelperObjectsUserIdArray = allHelperObjects.map{|helperObject| helperObject.user_id}
   # now create an array of the actual user object
-  helperUserObjectsArray = []
-  allHelperObjectsUserIdArray.each do |user_id|
-    helperUserObjectsArray << User.find(user_id)
+  # helperUserObjectsArray = []
+  # allHelperObjectsUserIdArray.each do |user_id|
+
+  #   helperUserObjectsArray << User.find(user_id)
+  # end
+
+
+  helpersAndTheirHelp = []
+
+  allHelperObjects.each do |helper|
+    newHelperObject = {}
+    newHelperObject["qty_offered"] = helper.qty_offered
+    newHelperObject["helper"] = HelperSerializer.new(User.find(helper.user_id))
+    helpersAndTheirHelp << newHelperObject
+
   end
-  return helperUserObjectsArray.map{|helper| HelperSerializer.new(helper)}
+
+
+  return helpersAndTheirHelp
+
+  # return helperUserObjectsArray.map{|helper| HelperSerializer.new(helper)}
 end
 
 end
