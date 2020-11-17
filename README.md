@@ -94,6 +94,8 @@
   
  <h1 id="goals">Goals</h1>
   <p>The goal is to provide a reliable platform for information on pandemics in Africa and enable asking/requesting for help.</p>
+   <p>N/B: The goal has been updated to reflect the global nature of the mobile app nearing completion</p>
+
   
  <a href="#table-of-contents"> <img src="https://img.shields.io/badge/-Back%20To%20Table%20of%20Contents-lightgrey" style="max-width:50%;"></a>
  
